@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Layanan Hukum - Law Office Wishnu Rusydianto & Partners">
-    <title>Layanan Hukum - Wishnu Rusydianto & Partners</title>
+    <meta name="description"
+        content="Hubungi Kami - Law Office Wishnu Rusydianto & Partners. Konsultasi hukum gratis dan layanan kantor pengacara terbaik di Semarang.">
+    <meta name="keywords"
+        content="Kontak Pengacara Semarang, Alamat Law Office Semarang, Konsultasi Hukum Semarang, WhatsApp Pengacara Semarang">
+    <link rel="canonical" href="https://wishnurusydianto.com/contact.html">
+    <title>Contact Us - Wishnu Rusydianto & Partners</title>
     <link rel="shortcut icon" href="assets/images/logo-wr-update-3000x2400.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -37,15 +41,17 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        /* Navbar Scroll Effect */
-        .parallax-services {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/wr-1-2000x1528.png');
+        /* Parallax Background */
+        .parallax-contact {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('assets/images/img-7038-2000x1333.jpg');
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
+        /* Navbar Scroll Effect */
         .navbar-scrolled {
             background: rgba(255, 255, 255, 0.98) !important;
             backdrop-filter: blur(10px);
@@ -78,14 +84,11 @@
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        /* Service Card Hover */
-        .service-item {
-            transition: all 0.3s ease;
-        }
-
-        .service-item:hover {
-            transform: translateX(10px);
-            border-left-color: #c9a227;
+        /* Form Focus Effects */
+        .form-input:focus {
+            outline: none;
+            border-color: #c9a227;
+            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.2);
         }
 
         /* Mobile Menu */
@@ -129,6 +132,27 @@
             visibility: visible;
         }
 
+        /* Button Hover Effect */
+        .btn-submit {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-submit:hover::before {
+            left: 100%;
+        }
+
         /* Mobile Menu Background */
         .mobile-menu-bg {
             background-image: linear-gradient(rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.95)), url('assets/images/wr-1-2000x1528.png');
@@ -144,27 +168,27 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0">
-                    <img src="assets/images/logo-wr-update-3000x2400.png" alt="WR Logo" class="h-14 w-auto">
+                <a href="home.html" class="flex-shrink-0">
+                    <img src="assets/images/logo-wr-update-3000x2400.png" alt="WR Law Office Logo" class="h-14 w-auto">
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html"
+                    <a href="home.html"
                         class="flex items-center text-white hover:text-primary transition-colors duration-300">
                         Home
                     </a>
-                    <a href="Daftar Kasus.html" class="text-white hover:text-primary transition-colors duration-300">
-                        Daftar Kasus
+                    <a href="perkara.html" class="text-white hover:text-primary transition-colors duration-300">
+                        Perkara
                     </a>
-                    <a href="Layanan Hukum.html" class="text-primary font-semibold transition-colors duration-300">
-                        Layanan Hukum
+                    <a href="service.html" class="text-white hover:text-primary transition-colors duration-300">
+                        Service
                     </a>
-                    <a href="index.html#our-team" class="text-white hover:text-primary transition-colors duration-300">
+                    <a href="home.html#our-team" class="text-white hover:text-primary transition-colors duration-300">
                         Our Team
                     </a>
-                    <a href="Contact Us.html" class="text-white hover:text-primary transition-colors duration-300">
-                        Contact Us
+                    <a href="contact.html" class="text-primary font-semibold transition-colors duration-300">
+                        Contact
                     </a>
                 </div>
 
@@ -185,100 +209,93 @@
                 <i class="fas fa-times"></i>
             </button>
             <div class="mt-10 flex flex-col space-y-6">
-                <a href="index.html" class="text-white hover:text-primary transition-colors duration-300">
+                <a href="home.html" class="text-white hover:text-primary transition-colors duration-300">
                     Home
                 </a>
-                <a href="Daftar Kasus.html" class="text-white hover:text-primary transition-colors duration-300">
-                    Daftar Kasus
+                <a href="perkara.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Perkara
                 </a>
-                <a href="Layanan Hukum.html" class="text-primary font-semibold transition-colors duration-300">
-                    Layanan Hukum
+                <a href="service.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Service
                 </a>
-                <a href="index.html#our-team" class="text-white hover:text-primary transition-colors duration-300">
+                <a href="home.html#our-team" class="text-white hover:text-primary transition-colors duration-300">
                     Our Team
                 </a>
-                <a href="Contact Us.html" class="text-white hover:text-primary transition-colors duration-300">
-                    Contact Us
+                <a href="contact.html" class="text-primary font-semibold transition-colors duration-300">
+                    Contact
                 </a>
             </div>
         </div>
     </div>
 
-
-
-    <!-- Title Section -->
-    <section class="pt-40 pb-20 lg:pt-52 lg:pb-32 parallax-services">
+    <!-- Contact Section -->
+    <section class="parallax-contact min-h-screen pt-24 pb-16 flex items-center">
         <div class="container mx-auto px-4">
-            <div class="text-center animate-fadeInUp">
-                <h2 class="font-bold text-white leading-[1.2] md:leading-tight tracking-tight">
-                    <span class="text-xl md:text-2xl lg:text-3xl font-medium text-gray-400 block mb-2">Layanan Hukum
-                        Yang Ditawarkan</span>
-                    <span class="text-3xl md:text-5xl lg:text-6xl text-primary font-extrabold block"
-                        style="text-shadow: 2px 2px 4px rgba(201, 162, 39, 0.2);">Law Office Wishnu Rusydianto &
-                        Partners</span>
-                    <span
-                        class="text-lg md:text-2xl lg:text-3xl font-light text-gray-300 block mt-2 md:mt-4 italic tracking-widest uppercase">Advocates
-                        and Legal Consultant</span>
-                </h2>
-                <div class="w-24 h-1.5 bg-primary mx-auto mt-10 rounded-full"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services List 1 -->
-    <section class="py-12 bg-dark">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto space-y-6">
-                <!-- Service 1 -->
-                <div class="service-item bg-darker rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-gavel text-xl text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-primary mb-2">LITIGATION</h3>
-                            <p class="text-gray-400">
-                                Commercial Litigation • Corruption Litigation • Criminal Litigation
-                            </p>
-                        </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                <!-- Map -->
+                <div class="animate-fadeInUp h-full">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl h-full min-h-[400px] border border-gray-700">
+                        <iframe
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&q=place_id:ChIJhy8Hh7CLcC4RY1fKQMF6xxs"
+                            allowfullscreen="" class="w-full h-full border-0">
+                        </iframe>
                     </div>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="service-item bg-darker rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-building text-xl text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-primary mb-2">CORPORATE / COMMERCIAL PRACTICE</h3>
-                            <p class="text-gray-400">
-                                Commerce and Investment • Compliance and Risk Management • Employment • Environment •
-                                Forestry, Plantation and Land • Healthcare and Hospitals • Insurance • Post-Acquisition
-                                Integration • Private Equity • Real Estate • Restructuring • Shipping, Logistics and
-                                Transportation • Telecommunications and ITC Corporate/Commercial Practice
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Contact Form -->
+                <div class="animate-fadeInUp h-full" style="animation-delay: 0.2s;">
+                    <div
+                        class="bg-dark/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 h-full flex flex-col justify-center">
+                        <h2 class="text-4xl font-bold text-white mb-6">Drop a Line</h2>
 
-                <!-- Service 3 -->
-                <div class="service-item bg-darker rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-lightbulb text-xl text-primary"></i>
+                        <!-- Contact Info -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-white mb-2">Jangan ragu untuk menghubungi kami</h3>
+                            <!-- <p class="text-gray-400 font-semibold mb-6">Siap untuk penawaran dan kerjasama</p> -->
+                            <div class="space-y-4">
+                                <a href="https://wa.me/6281228505402" target="_blank"
+                                    class="flex items-center text-gray-400 hover:text-primary transition-colors group">
+                                    <div
+                                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
+                                        <i class="fab fa-whatsapp text-xl text-primary"></i>
+                                    </div>
+                                    <span class="text-lg">+62 812-2850-5402 (WhatsApp)</span>
+                                </a>
+                                <a href="mailto:wishnu.rusydianto@gmail.com"
+                                    class="flex items-center text-gray-400 hover:text-primary transition-colors group">
+                                    <div
+                                        class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
+                                        <i class="fas fa-envelope text-xl text-primary"></i>
+                                    </div>
+                                    <span class="text-lg">wishnu.rusydianto@gmail.com</span>
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-primary mb-2">INTELLECTUAL PROPERTY RIGHTS</h3>
-                            <p class="text-gray-400">
-                                Anti-Counterfeiting Programs • Copyright • Franchise/IP Licenses • Industrial Design •
-                                Integrated Circuits • IP Litigation • Patents • Plant Varieties • Trade Secrets •
-                                Trademarks (trademark portfolio management, trademark prosecution, domain name
-                                trademarks/trade dress litigation)
-                            </p>
+
+                        <!-- Form -->
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <input type="text" id="name" name="name" placeholder="Nama" required
+                                    class="form-input w-full px-4 py-3 bg-darker border border-gray-700 rounded-lg text-white placeholder-gray-500 transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+                            </div>
+                            <div>
+                                <input type="tel" id="phone" name="phone" placeholder="HP anda" required
+                                    class="form-input w-full px-4 py-3 bg-darker border border-gray-700 rounded-lg text-white placeholder-gray-500 transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+                            </div>
+                            <div>
+                                <textarea id="message" name="message" rows="4" placeholder="Pesan" required
+                                    class="form-input w-full px-4 py-3 bg-darker border border-gray-700 rounded-lg text-white placeholder-gray-500 transition-all duration-300 resize-none focus:border-primary focus:ring-1 focus:ring-primary outline-none"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="btn-submit w-full py-4 bg-primary text-dark font-bold rounded-lg hover:bg-primary/90 transition-all duration-300 text-lg shadow-lg hover:shadow-primary/20 transform hover:-translate-y-1">
+                                <i class="fab fa-whatsapp mr-2"></i>Kirim Pesan
+                            </button>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="success-message"
+                            class="hidden mt-4 p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400 text-center">
+                            <i class="fas fa-check-circle mr-2"></i>Terima kasih telah mengisi formulir
                         </div>
                     </div>
                 </div>
@@ -286,68 +303,7 @@
         </div>
     </section>
 
-    <!-- Services List 2 -->
-    <section class="py-12 bg-darker">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto space-y-6">
-                <!-- Service 4 -->
-                <div class="service-item bg-dark rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-coins text-xl text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-primary mb-2">FINANCE & PROJECT PRACTICE</h3>
-                            <p class="text-gray-400">
-                                Banking & Finance • Acquisition Finance • Asset Finance • Derivatives & Financial
-                                Products • Financial Regulation • Financial Restructuring & Insolvency • Funds – Non
-                                Private Equity • Global Custody • Islamic Finance • Loans & Credit Facilities • Project
-                                Finance • Retail Banking • Securitization • Structured Finance • Trade Finance
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Service 5 -->
-                <div class="service-item bg-dark rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-file-invoice-dollar text-xl text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-primary mb-2">TAX & TRADE PRACTICE</h3>
-                            <p class="text-gray-400">
-                                <strong class="text-white">Tax:</strong> International and Domestic Corporate Tax
-                                Planning • Tax Controversy/Disputes • Transfer Pricing • Wealth Management
-                                <br><br>
-                                <strong class="text-white">Trade:</strong> Anti-Dumping • Anti-Monopoly • Consumer
-                                Protection and Product Liability • Export/Import Customs planning and disputes •
-                                International Trade
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="service-item bg-dark rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-balance-scale text-xl text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-primary mb-2">COMMERCIAL DISPUTE RESOLUTION PRACTICE</h3>
-                            <p class="text-gray-400">
-                                Bankruptcy/Insolvency • Contractual Disputes • General Commercial Litigation
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- CTA Section -->
     <section class="py-16 bg-white">
@@ -358,7 +314,7 @@
                     <h2 class="text-5xl md:text-6xl font-bold text-primary tracking-wider"
                         style="text-shadow: 0 0 20px rgba(201, 162, 39, 0.2);">GRATIS</h2>
                 </div>
-                <a href="Contact Us.html"
+                <a href="contact.html"
                     class="px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-lg font-semibold text-lg transform hover:scale-105 shadow-lg">
                     Mari Konsultasi dengan Kami
                 </a>
@@ -400,11 +356,9 @@
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Links</h4>
                     <div class="flex flex-col space-y-2">
-                        <a href="index.html" class="text-gray-400 hover:text-primary transition-colors">Home</a>
-                        <a href="Daftar Kasus.html" class="text-gray-400 hover:text-primary transition-colors">Daftar
-                            Kasus</a>
-                        <a href="Layanan Hukum.html" class="text-gray-400 hover:text-primary transition-colors">Layanan
-                            Hukum</a>
+                        <a href="home.html" class="text-gray-400 hover:text-primary transition-colors">Home</a>
+                        <a href="perkara.html" class="text-gray-400 hover:text-primary transition-colors">Perkara</a>
+                        <a href="service.html" class="text-gray-400 hover:text-primary transition-colors">Service</a>
                     </div>
                     <h4 class="text-lg font-bold text-white mt-6 mb-4">Informasi</h4>
                     <p class="text-gray-400">
@@ -505,6 +459,38 @@
 
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form Submission
+        // Form Submission
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Construct WhatsApp URL
+            const text = `Halo, saya ingin penawaran dan kerjasama.%0A%0ANama: ${name}%0AHP: ${phone}%0APesan: ${message}`;
+            const whatsappUrl = `https://wa.me/6281228505402?text=${text}`;
+
+            // Open WhatsApp in new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Show success message
+            successMessage.classList.remove('hidden');
+
+            // Reset form
+            contactForm.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
         });
     </script>
 </body>
