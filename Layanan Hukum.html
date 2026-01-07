@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan Hukum - Law Office Wishnu Rusydianto & Partners">
+    <title>Layanan Hukum - Wishnu Rusydianto & Partners</title>
+    <link rel="shortcut icon" href="assets/images/logo-wr-update-3000x2400.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#c9a227',
+                        'dark': '#1a1a1a',
+                        'darker': '#0d0d0d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Navbar Scroll Effect */
+        .parallax-services {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/wr-1-2000x1528.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-scrolled a,
+        .navbar-scrolled button {
+            color: #1a1a1a !important;
+        }
+
+        .navbar-scrolled a:hover {
+            color: #c9a227 !important;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Service Card Hover */
+        .service-item {
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateX(10px);
+            border-left-color: #c9a227;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile Menu Background */
+        .mobile-menu-bg {
+            background-image: linear-gradient(rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.95)), url('assets/images/wr-1-2000x1528.png');
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-darker text-white">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="assets/images/logo-wr-update-3000x2400.png" alt="WR Logo" class="h-14 w-auto">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="flex items-center text-white hover:text-primary transition-colors duration-300">
+                        Home
+                    </a>
+                    <a href="Daftar Kasus.html" class="text-white hover:text-primary transition-colors duration-300">
+                        Daftar Kasus
+                    </a>
+                    <a href="Layanan Hukum.html" class="text-primary font-semibold transition-colors duration-300">
+                        Layanan Hukum
+                    </a>
+                    <a href="index.html#our-team" class="text-white hover:text-primary transition-colors duration-300">
+                        Our Team
+                    </a>
+                    <a href="Contact Us.html" class="text-white hover:text-primary transition-colors duration-300">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="mobile-menu mobile-menu-bg fixed top-0 right-0 h-full w-64 z-[9999] shadow-2xl border-l-2 border-primary">
+        <div class="p-6">
+            <button id="close-menu" class="absolute top-4 right-4 text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="mt-10 flex flex-col space-y-6">
+                <a href="index.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Home
+                </a>
+                <a href="Daftar Kasus.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Daftar Kasus
+                </a>
+                <a href="Layanan Hukum.html" class="text-primary font-semibold transition-colors duration-300">
+                    Layanan Hukum
+                </a>
+                <a href="index.html#our-team" class="text-white hover:text-primary transition-colors duration-300">
+                    Our Team
+                </a>
+                <a href="Contact Us.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Title Section -->
+    <section class="pt-32 pb-16 parallax-services">
+        <div class="container mx-auto px-4">
+            <div class="text-center animate-fadeInUp">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">
+                    Layanan Hukum Yang Ditawarkan oleh<br>
+                    <span class="text-primary">Law Office Wishnu Rusydianto & Partners</span><br>
+                    Advocates and Legal Consultant
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services List 1 -->
+    <section class="py-12 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- Service 1 -->
+                <div class="service-item bg-darker rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-gavel text-xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">LITIGATION</h3>
+                            <p class="text-gray-400">
+                                Commercial Litigation • Corruption Litigation • Criminal Litigation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-item bg-darker rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-building text-xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">CORPORATE/COMMERCIAL PRACTICE</h3>
+                            <p class="text-gray-400">
+                                Commerce and Investment • Compliance and Risk Management • Employment • Environment •
+                                Forestry, Plantation and Land • Healthcare and Hospitals • Insurance • Post-Acquisition
+                                Integration • Private Equity • Real Estate • Restructuring • Shipping, Logistics and
+                                Transportation • Telecommunications and ITC Corporate/Commercial Practice
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-item bg-darker rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-lightbulb text-xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">INTELLECTUAL PROPERTY RIGHTS</h3>
+                            <p class="text-gray-400">
+                                Anti-Counterfeiting Programs • Copyright • Franchise/IP Licenses • Industrial Design •
+                                Integrated Circuits • IP Litigation • Patents • Plant Varieties • Trade Secrets •
+                                Trademarks (trademark portfolio management, trademark prosecution, domain name
+                                trademarks/trade dress litigation)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services List 2 -->
+    <section class="py-12 bg-darker">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- Service 4 -->
+                <div class="service-item bg-dark rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-coins text-xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">FINANCE & PROJECT PRACTICE</h3>
+                            <p class="text-gray-400">
+                                Banking & Finance • Acquisition Finance • Asset Finance • Derivatives & Financial
+                                Products • Financial Regulation • Financial Restructuring & Insolvency • Funds – Non
+                                Private Equity • Global Custody • Islamic Finance • Loans & Credit Facilities • Project
+                                Finance • Retail Banking • Securitization • Structured Finance • Trade Finance
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-item bg-dark rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-file-invoice-dollar text-xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">TAX & TRADE PRACTICE</h3>
+                            <p class="text-gray-400">
+                                <strong class="text-white">Tax:</strong> International and Domestic Corporate Tax
+                                Planning • Tax Controversy/Disputes • Transfer Pricing • Wealth Management
+                                <br><br>
+                                <strong class="text-white">Trade:</strong> Anti-Dumping • Anti-Monopoly • Consumer
+                                Protection and Product Liability • Export/Import Customs planning and disputes •
+                                International Trade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-item bg-dark rounded-xl p-6 border-l-4 border-gray-700 hover:border-primary">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-balance-scale text-xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary mb-2">COMMERCIAL DISPUTE RESOLUTION PRACTICE</h3>
+                            <p class="text-gray-400">
+                                Bankruptcy/Insolvency • Contractual Disputes • General Commercial Litigation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl text-gray-700 mb-2 font-light">INFO KONSULTASI HUKUM ?</h3>
+                    <h2 class="text-5xl md:text-6xl font-bold text-primary tracking-wider"
+                        style="text-shadow: 0 0 20px rgba(201, 162, 39, 0.2);">GRATIS</h2>
+                </div>
+                <a href="Contact Us.html"
+                    class="px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-lg font-semibold text-lg transform hover:scale-105 shadow-lg">
+                    Mari Konsultasi dengan Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Logo -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto flex items-center justify-center md:justify-start">
+                <a href="index.html">
+                    <img src="assets/images/logo-804x280.jpg" alt="WR Logo"
+                        class="h-20 w-auto transition-transform hover:scale-105">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Address -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Alamat</h4>
+                    <p class="text-gray-400 mb-6">
+                        Jl. Argomulyo Mukti I No.D-27, Tlogomulyo, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50195,
+                        Indonesia
+                    </p>
+                    <h4 class="text-lg font-bold text-white mb-4">Contacts</h4>
+                    <p class="text-gray-400">
+                        Email: wishnu.rusydianto@gmail.com<br>
+                        Phone: +62 812-2850-5402
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Links</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="index.html" class="text-gray-400 hover:text-primary transition-colors">Home</a>
+                        <a href="Daftar Kasus.html" class="text-gray-400 hover:text-primary transition-colors">Daftar
+                            Kasus</a>
+                        <a href="Layanan Hukum.html" class="text-gray-400 hover:text-primary transition-colors">Layanan
+                            Hukum</a>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mt-6 mb-4">Informasi</h4>
+                    <p class="text-gray-400">
+                        Wishnu Rusydianto & Legal Consultant merupakan kantor pengacara yang menangani setiap kasus
+                        dengan layanan yang terbaik dan profesional
+                    </p>
+                </div>
+
+                <!-- Map -->
+                <div>
+                    <div class="rounded-lg overflow-hidden h-64">
+                        <iframe
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&q=place_id:ChIJhy8Hh7CLcC4RY1fKQMF6xxs"
+                            allowfullscreen="" class="w-full h-full border-0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-800 my-8">
+
+            <!-- Copyright -->
+            <div class="flex flex-col items-center justify-center gap-6">
+                <p class="text-gray-400 text-sm text-center">
+                    © Copyright 2026 All Rights Reserved
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                        class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                        class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCJ5izPuI_7nkhHhwV4fYWKg" target="_blank"
+                        class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281228505402?text=Saya%20ingin%20konsultasi%20dengan%20Law%20Office%20WR" target="_blank"
+        class="whatsapp-float fixed bottom-6 right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fab fa-whatsapp text-3xl text-white"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top"
+        class="scroll-top fixed bottom-24 right-6 w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/80 transition-all z-50">
+        <i class="fas fa-chevron-up text-dark text-sm"></i>
+    </button>
+
+    <script>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Scroll to Top
+        const scrollTopBtn = document.getElementById('scroll-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

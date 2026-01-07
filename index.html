@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Law Office Wishnu Rusydianto & Partners - Firma Hukum Terbaik di Semarang">
+    <title>Wishnu Rusydianto & Partners</title>
+    <link rel="shortcut icon" href="assets/images/logo-wr-update-3000x2400.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#c9a227',
+                        'dark': '#1a1a1a',
+                        'darker': '#0d0d0d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Parallax Background */
+        .parallax-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('assets/images/group-1-2000x1422.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax-team {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('assets/images/group-1-2000x1422.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax-lawyer {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('assets/images/img-7038-2000x1333.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax-services {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('assets/images/wr-2-2000x1505.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax-services-white {
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                url('assets/images/wr-1-2000x1528.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Media Query for Mobile Background */
+        @media (max-width: 768px) {
+            .parallax-hero {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/IMG_7064.JPG') !important;
+                background-attachment: scroll !important;
+            }
+
+            .parallax-team {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/IMG_7064.JPG') !important;
+                background-attachment: scroll !important;
+            }
+        }
+
+        /* Navbar Scroll Effect */
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-scrolled a,
+        .navbar-scrolled button {
+            color: #1a1a1a !important;
+        }
+
+        .navbar-scrolled a:hover {
+            color: #c9a227 !important;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Card Hover Effect */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(201, 162, 39, 0.2);
+        }
+
+        /* Team Card Effect */
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+
+        .team-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile Menu Background */
+        .mobile-menu-bg {
+            background-image: linear-gradient(rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.95)), url('assets/images/wr-1-2000x1528.png');
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-darker text-white">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="assets/images/logo-wr-update-3000x2400.png" alt="WR Logo" class="h-14 w-auto">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="flex items-center text-white hover:text-primary transition-colors duration-300">
+                        Home
+                    </a>
+                    <a href="Daftar Kasus.html" class="text-white hover:text-primary transition-colors duration-300">
+                        Daftar Kasus
+                    </a>
+                    <a href="Layanan Hukum.html" class="text-white hover:text-primary transition-colors duration-300">
+                        Layanan Hukum
+                    </a>
+                    <a href="#our-team" class="text-white hover:text-primary transition-colors duration-300">
+                        Our Team
+                    </a>
+                    <a href="Contact Us.html" class="text-white hover:text-primary transition-colors duration-300">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="mobile-menu mobile-menu-bg fixed top-0 right-0 h-full w-64 z-[9999] shadow-2xl border-l-2 border-primary">
+        <div class="p-6">
+            <button id="close-menu" class="absolute top-4 right-4 text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="mt-10 flex flex-col space-y-6">
+                <a href="index.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Home
+                </a>
+                <a href="Daftar Kasus.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Daftar Kasus
+                </a>
+                <a href="Layanan Hukum.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Layanan Hukum
+                </a>
+                <a href="#our-team" class="text-white hover:text-primary transition-colors duration-300">
+                    Our Team
+                </a>
+                <a href="Contact Us.html" class="text-white hover:text-primary transition-colors duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+        class="parallax-hero min-h-screen flex flex-col justify-start lg:justify-end lg:items-start relative pb-20 lg:pb-24">
+        <div class="container mx-auto px-4 mt-80 lg:mt-0 lg:pl-20 animate-fadeInUp">
+            <div class="max-w-5xl lg:max-w-5xl text-center lg:text-left relative z-10">
+                <!-- Decorative Element Top (Desktop Only) -->
+                <div class="hidden lg:flex items-center justify-start mb-8">
+                    <div class="w-16 h-px bg-gradient-to-r from-primary via-primary to-transparent">
+                    </div>
+                    <div class="mx-4">
+                        <i class="fas fa-balance-scale text-primary text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Main Quote -->
+                <h1 class="font-roboto text-1xl md:text-5xl lg:text-2xl text-white mb-8 leading-snug tracking-wide">
+                    <span class="font-normal">Keadilan Bukan Hanya Perlu</span><br>
+                    <span class="font-normal">di Jalankan, tetapi juga di</span>
+                    <br class="hidden lg:block">
+                    <span class="font-bold not-italic text-primary uppercase tracking-widest"
+                        style="text-shadow: 0 0 30px rgba(201, 162, 39, 0.5);">NYATAKAN</span>
+                    <span class="font-light italic">&</span>
+                    <br class="lg:hidden">
+                    <span class="font-bold not-italic text-primary uppercase tracking-widest"
+                        style="text-shadow: 0 0 30px rgba(201, 162, 39, 0.5);">TAMPAK DI JALANKAN</span>
+                </h1>
+
+                <!-- Decorative Icon (Mobile Only) -->
+                <div class="flex lg:hidden items-center justify-center my-8">
+                    <div class="w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+                    <div class="mx-4">
+                        <i class="fas fa-balance-scale text-primary text-2xl"></i>
+                    </div>
+                    <div class="w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+                </div>
+
+                <!-- Decorative Divider (Desktop Only) -->
+                <div class="hidden lg:flex items-center justify-start my-8">
+                    <div class="w-24 h-px bg-gradient-to-r from-gray-500 via-gray-500 to-transparent">
+                    </div>
+                </div>
+
+                <!-- Author -->
+                <p class="font-roboto text-xl md:text-2xl text-gray-300 tracking-wider">
+                    <span class="text-primary">"</span>
+                    <span class="italic">Wishnu Rusydianto</span>
+                    <span class="text-primary">"</span>
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-3xl text-primary"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-white py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 text-dark leading-relaxed">
+                    Law Office Wishnu Rusydianto & Partners,<br>
+                    Advocates and Legal Consultant adalah<br>
+                    <span class="text-primary font-bold">Firma Hukum TERBAIK Di Semarang</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                    Melalui tim konsultan hukum kami, Wishnu Rusydianto & Partners ("Kantor Hukum WR") adalah Firma
+                    Hukum terbaik di Semarang yang menawarkan dan menyediakan jasa layanan hukum untuk menangani seluruh
+                    persoalan dalam masalah hukum di seluruh masyarakat.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Title -->
+    <section class="py-24 bg-[#0D0D0D]">
+        <div class="container mx-auto px-4">
+            <div class="text-center animate-fadeInUp">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-relaxed">
+                    Layanan Hukum Yang Ditawarkan oleh<br>
+                    <span class="text-primary font-bold">Law Office Wishnu Rusydianto & Partners</span><br>
+                    Advocates and Legal Consultant
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid 1 -->
+    <section class="py-16 parallax-services-white">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div
+                    class="service-card bg-darker rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
+                    <div
+                        class="flex items-center mb-6 p-4 rounded-xl border border-gray-600 bg-white/5 backdrop-blur-sm">
+                        <div class="w-20 h-20 flex items-center justify-center mr-4">
+                            <lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_CZYGRN.json"
+                                background="transparent" speed="1" style="width: 80px; height: 80px;" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-white leading-snug flex-1">LITIGATION</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Commercial Litigation • Corruption Litigation • Criminal Litigation,
+                        <a href="Layanan Hukum.html" class="text-primary hover:underline">Learn more</a> ..
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="service-card bg-darker rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
+                    <div
+                        class="flex items-center mb-6 p-4 rounded-xl border border-gray-600 bg-white/5 backdrop-blur-sm">
+                        <div class="w-20 h-20 flex items-center justify-center mr-4">
+                            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_EzPrWM.json"
+                                background="transparent" speed="1" style="width: 80px; height: 80px;" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-white leading-snug flex-1">CORPORATE / COMMERCIAL
+                            PRACTICE</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Commerce and Investment • Compliance and Risk Management • Employment.
+                        <a href="Layanan Hukum.html" class="text-primary hover:underline">Learn more</a> ..
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="service-card bg-darker rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
+                    <div
+                        class="flex items-center mb-6 p-4 rounded-xl border border-gray-600 bg-white/5 backdrop-blur-sm">
+                        <div class="w-20 h-20 flex items-center justify-center mr-4">
+                            <lottie-player src="https://assets.lottiefiles.com/packages/lf20_eAK1S0.json"
+                                background="transparent" speed="1" style="width: 80px; height: 80px;" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-white leading-snug flex-1">INTELLECTUAL PROPERTY
+                            RIGHTS</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Anti-Counterfeiting Programs • Copyright • Franchise/IP Licenses.
+                        <a href="Layanan Hukum.html" class="text-primary hover:underline">Learn more</a> ..
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid 2 -->
+    <!-- Services Grid 2 -->
+    <section class="py-16 parallax-services-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 4 -->
+                <div
+                    class="service-card bg-darker rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
+                    <div
+                        class="flex items-center mb-6 p-4 rounded-xl border border-gray-600 bg-white/5 backdrop-blur-sm">
+                        <div class="w-20 h-20 flex items-center justify-center mr-4">
+                            <lottie-player src="https://assets.lottiefiles.com/packages/lf20_zu3z8n5o.json"
+                                background="transparent" speed="1" style="width: 80px; height: 80px;" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-white leading-snug flex-1">FINANCE & PROJECTS
+                            PRACTICE</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Banking & Finance • Acquisition Finance • Asset Finance.
+                        <a href="Layanan Hukum.html" class="text-primary hover:underline">Learn more</a> ..
+                    </p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div
+                    class="service-card bg-darker rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
+                    <div
+                        class="flex items-center mb-6 p-4 rounded-xl border border-gray-600 bg-white/5 backdrop-blur-sm">
+                        <div class="w-20 h-20 flex items-center justify-center mr-4">
+                            <lottie-player src="https://assets.lottiefiles.com/packages/lf20_EjJDhM.json"
+                                background="transparent" speed="1" style="width: 80px; height: 80px;" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-white leading-snug flex-1">TAX & TRADE PRACTICE
+                        </h3>
+                    </div>
+                    <p class="text-gray-400">
+                        International and Domestic Corporate Tax Planning.
+                        <a href="Layanan Hukum.html" class="text-primary hover:underline">Learn more</a> ..
+                    </p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div
+                    class="service-card bg-darker rounded-xl p-8 border border-gray-800 hover:border-primary transition-all duration-300">
+                    <div
+                        class="flex items-center mb-6 p-4 rounded-xl border border-gray-600 bg-white/5 backdrop-blur-sm">
+                        <div class="w-20 h-20 flex items-center justify-center mr-4">
+                            <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_3ijiy6.json"
+                                background="transparent" speed="1" style="width: 80px; height: 80px;" loop
+                                autoplay></lottie-player>
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-white leading-snug flex-1">COMMERCIAL DISPUTE
+                            RESOLUTION PRACTICE</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Bankruptcy/Insolvency • Contractual Disputes • General Commercial Litigation.
+                        <a href="Layanan Hukum.html" class="text-primary hover:underline">Learn more</a> ..
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lawyer Section -->
+    <section class="parallax-lawyer py-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="assets/images/Group 84.png" alt="Wishnu Rusydianto"
+                        class="max-w-md w-full rounded-lg shadow-2xl">
+                </div>
+                <div class="lg:w-1/2 text-white">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                        <span class="font-bold">WISHNU</span> RUSYDIANTO, S.H.
+                    </h2>
+                    <h3 class="text-2xl text-primary mb-6">(Lawyer)</h3>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Lahir di Semarang pada tahun 1984, Wishnu Rusydianto memperoleh gelar sarjana S.1 di bidang Ilmu
+                        Hukum jurusan Ilmu Keperdataan Islam pada Universitas Islam Sultan Agung (UNISSULA) Semarang
+                        pada tahun 2008 dan saat ini masih menempuh program Pasca Sarjana di Magister Hukum Universitas
+                        Semarang (USM). Memulai karirnya, beliau terjun pada bidang perbankan sejak tahun 2008 sampai
+                        dengan 2013 sebagai legal officer, dengan keahlian di bidang ilmu hukum perdata.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="our-team" class="parallax-team py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                    OUR AWESOME TEAM
+                </h2>
+            </div>
+
+            <!-- Team Grid Row 1 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Team Member 1 -->
+                <div class="team-card group relative overflow-hidden rounded-xl">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="assets/images/tim-1-631x631.png" alt="Dina Harindra Trisnani"
+                            class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div
+                        class="team-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="flex space-x-3">
+                            <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-dark/90 p-4 text-center">
+                        <p class="text-white font-medium">Dina Harindra Trisnani, SH, MKn</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card group relative overflow-hidden rounded-xl">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="assets/images/tim-2-631x631.png" alt="Maulana Ali Mashar"
+                            class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div
+                        class="team-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="flex space-x-3">
+                            <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-dark/90 p-4 text-center">
+                        <p class="text-white font-medium">Maulana Ali Mashar, SH, MKn</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card group relative overflow-hidden rounded-xl">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="assets/images/tim-3-631x631.png" alt="Kholiq Rifa'i"
+                            class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div
+                        class="team-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="flex space-x-3">
+                            <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-dark/90 p-4 text-center">
+                        <p class="text-white font-medium">Kholiq Rifa'i, SH</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card group relative overflow-hidden rounded-xl">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="assets/images/tim-4-631x631.png" alt="Haykal Azmi Baswedan"
+                            class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div
+                        class="team-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="flex space-x-3">
+                            <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-dark/90 p-4 text-center">
+                        <p class="text-white font-medium">Haykal Azmi Baswedan, SH</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Grid Row 2 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 5 -->
+                <div class="team-card group relative overflow-hidden rounded-xl">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="assets/images/tim-5-631x631.png" alt="Rizal Tamami"
+                            class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div
+                        class="team-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="flex space-x-3">
+                            <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-dark/90 p-4 text-center">
+                        <p class="text-white font-medium">Rizal Tamami, SH</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="team-card group relative overflow-hidden rounded-xl">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="assets/images/tim-6-631x631.png" alt="M Aniq Ridlo"
+                            class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div
+                        class="team-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="flex space-x-3">
+                            <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-dark/90 p-4 text-center">
+                        <p class="text-white font-medium">M Aniq Ridlo, SH</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="team-card group relative overflow-hidden rounded-xl">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="assets/images/tim-7-631x631.png" alt="Muslich Ashari"
+                            class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div
+                        class="team-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="flex space-x-3">
+                            <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-dark/90 p-4 text-center">
+                        <p class="text-white font-medium">Muslich Ashari, SH, MH</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 8 -->
+                <div class="team-card group relative overflow-hidden rounded-xl">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="assets/images/asd-1080x1080.png" alt="Suryanti"
+                            class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div
+                        class="team-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="flex space-x-3">
+                            <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                                class="text-white hover:text-primary transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-dark/90 p-4 text-center">
+                        <p class="text-white font-medium">Suryanti, SH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl md:text-3xl text-gray-700 mb-2 font-light">INFO KONSULTASI HUKUM ?</h3>
+                    <h2 class="text-5xl md:text-6xl font-bold text-primary tracking-wider"
+                        style="text-shadow: 0 0 20px rgba(201, 162, 39, 0.2);">GRATIS</h2>
+                </div>
+                <a href="Contact Us.html"
+                    class="px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-lg font-semibold text-lg transform hover:scale-105 shadow-lg">
+                    Mari Konsultasi dengan Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Logo -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto flex items-center justify-center md:justify-start">
+                <a href="index.html">
+                    <img src="assets/images/logo-804x280.jpg" alt="WR Logo"
+                        class="h-20 w-auto transition-transform hover:scale-105">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Address -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Alamat</h4>
+                    <p class="text-gray-400 mb-6">
+                        Jl. Argomulyo Mukti I No.D-27, Tlogomulyo, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50195,
+                        Indonesia
+                    </p>
+                    <h4 class="text-lg font-bold text-white mb-4">Contacts</h4>
+                    <p class="text-gray-400">
+                        Email: wishnu.rusydianto@gmail.com<br>
+                        Phone: +62 812-2850-5402
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Links</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="index.html" class="text-gray-400 hover:text-primary transition-colors">Home</a>
+                        <a href="Daftar Kasus.html" class="text-gray-400 hover:text-primary transition-colors">Daftar
+                            Kasus</a>
+                        <a href="Layanan Hukum.html" class="text-gray-400 hover:text-primary transition-colors">Layanan
+                            Hukum</a>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mt-6 mb-4">Informasi</h4>
+                    <p class="text-gray-400">
+                        Wishnu Rusydianto & Legal Consultant merupakan kantor pengacara yang menangani setiap kasus
+                        dengan layanan yang terbaik dan profesional
+                    </p>
+                </div>
+
+                <!-- Map -->
+                <div>
+                    <div class="rounded-lg overflow-hidden h-64">
+                        <iframe
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&q=place_id:ChIJhy8Hh7CLcC4RY1fKQMF6xxs"
+                            allowfullscreen="" class="w-full h-full border-0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-800 my-8">
+
+            <!-- Copyright -->
+            <div class="flex flex-col items-center justify-center gap-6">
+                <p class="text-gray-400 text-sm text-center">
+                    © Copyright 2026 All Rights Reserved
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/wisnoe_lawyer/" target="_blank"
+                        class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/wishnu.rusydianto" target="_blank"
+                        class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCJ5izPuI_7nkhHhwV4fYWKg" target="_blank"
+                        class="text-gray-400 hover:text-primary transition-colors transform hover:scale-110">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281228505402?text=Saya%20ingin%20konsultasi%20dengan%20Law%20Office%20WR" target="_blank"
+        class="whatsapp-float fixed bottom-6 right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fab fa-whatsapp text-3xl text-white"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top"
+        class="scroll-top fixed bottom-24 right-6 w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/80 transition-all z-50">
+        <i class="fas fa-chevron-up text-dark text-sm"></i>
+    </button>
+
+    <script>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Scroll to Top
+        const scrollTopBtn = document.getElementById('scroll-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
